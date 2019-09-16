@@ -13,11 +13,18 @@ def line(array)
     return puts current_line
   end 
 end 
-def take_a_number(array, name)
-  array<<name 
-  return puts "Welcome, #{name}. You are number #{array.length} in line." 
+
+def take_a_number(array)
+  counter = 0  
+  array.each do |customer| 
+    counter+=1
+    array<< counter
+    puts "Welcome, You are number #{counter}" 
 end 
 
+
+
+array<< counter+1  
 def now_serving(array)
   if array.empty?
     puts "There is nobody waiting to be served!"
